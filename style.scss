@@ -9,7 +9,7 @@ $tertiary-color: #E2E8F0;
 }
 
 body{
-    background-color: $tertiary-color;
+    background-color: $primary-color;
 }
 
 .container {
@@ -19,20 +19,20 @@ body{
 
 .header {
     grid-column: 2 / -1;
+    grid-row: 1 / 2;
     background-color: white;
     box-shadow: 0 4px 6px -6px black;
+    padding: 20px;
 
     .upper-content {
         display: flex;
         align-items: center;
-        padding: 20px;
         gap:20px;
         
         .right-side {
             display: flex;
             align-items: center;
             gap: 30px;
-            margin-right: 60px;
             margin-left: auto;
         }
         input[type="search"] {
@@ -42,9 +42,40 @@ body{
             outline: none;
             border: none;
             padding: 5px;
-            margin-right: 90px;
+            margin-right: 5%;
+        }
+    }
+
+    .lower-content {
+        display: flex;
+        gap: 20px;
+        padding: 30px 50px 0px 20px;
+
+        .profile-picture{
+            width: 80px;
+            height: 80px;
         }
 
+        .right-side {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .profile-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        button {
+            background-color: $primary-color;
+            color: white;
+            border-radius: 20px;
+            border: none;
+            padding: 10px 30px;
+        }
     }
 
     img {
@@ -52,12 +83,20 @@ body{
         height: 25px;
     }
 
-    .profile{
+    .profile-picture{
         width: 50px;
         height: 50px;
     }
+    grid-template-columns: repeat(3, 1f);
 }
 
 .sidebar {
     grid-column: 1 / 2;
+    color: white;
+    font-size: 1.3rem;
+
+    ul {
+        text-decoration: none;
+        list-style-type: none;
+    }
 }
