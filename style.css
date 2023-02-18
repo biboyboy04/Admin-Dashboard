@@ -1,4 +1,3 @@
-
 *,
 ::before,
 ::after {
@@ -8,7 +7,7 @@
 }
 
 body {
-  background-color: #1992D4;;
+  background-color: #E2E8F0;
 }
 
 .container {
@@ -17,16 +16,16 @@ body {
   grid-template-rows: 1fr 4fr;
 }
 
-
-.h1, .title {
+.h1 {
   font-weight: bold;
   font-size: 1.3rem;
-}
-
-.h1 {
   font-size: 1.7rem;
 }
 
+.h2 {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
 
 .header {
   grid-column: 2/3;
@@ -93,24 +92,20 @@ body {
 
 .sidebar {
   color: white;
-  grid-row: 1 / span 5;
+  grid-row: 1/span 2;
+  background-color: #1992D4;
 }
-
 .sidebar .logo-header {
   padding: 1rem;
-}
-
-.sidebar .logo-header, li {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
-
 .sidebar .logo-header img {
   width: 1.5em;
   height: 1.5em;
 }
-
 .sidebar ul {
   list-style-type: none;
   display: flex;
@@ -118,34 +113,40 @@ body {
   gap: 1rem;
   padding-left: 2rem;
 }
-
-.sidebar ul :nth-child(7) {
+.sidebar ul:nth-child(7) {
   margin-top: 2rem;
 }
-
 .sidebar ul img {
   width: 1.2em;
   height: 1.2em;
   color: #E2E8F0;
 }
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
-.content {
+.dashboard-content {
+  grid-row: 2/-1;
   background-color: #E2E8F0;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 1fr;
   padding: 1rem;
 }
 
 .project {
-  grid-column: 1 / 2;
-  grid-row: 1 / -1;
+  grid-column: 1/2;
+  grid-row: 1/-1;
   margin: 0;
   padding-right: 1rem;
 }
-
-.project-title {
-  margin-bottom: 1rem;
+.project img {
+  width: 2rem;
+}
+.project .h2 + p {
+  color: grey;
 }
 
 .project-content {
@@ -155,20 +156,73 @@ body {
   gap: 1rem;
 }
 
-.project .card {
+.project-card {
+  display: flex;
+  flex-direction: column;
   padding: 2rem;
   height: 200px;
-  background-color:white;
+  background-color: white;
   border-radius: 8px;
   border-left: 8px solid darkorange;
-  
-
 }
+
+.project-title {
+  margin-bottom: 1rem;
+}
+
+.project-button {
+  display: flex;
+  align-self: flex-end;
+  margin-top: auto;
+  gap: 2rem;
+}
+
 .announcement {
-  background-color: blue;
+  margin: 1rem;
+}
+.announcement .h2 + p {
+  color: grey;
+}
+
+.announcement-content, .trending-content {
+  background-color: white;
+  padding: 2rem;
+  padding-top: 1rem;
+  border-radius: 8px;
+}
+
+.announcement-card .h2 {
+  margin-top: 1rem;
+}
+.announcement-card .h2 + p {
+  margin-bottom: 1rem;
+}
+
+.announcement-title {
+  margin-bottom: 1rem;
 }
 
 .trending {
-  background-color: green;
-  width: 100px;
+  margin: 1rem;
+  border-radius: 8px;
 }
+.trending img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.trending-title {
+  margin-bottom: 1rem;
+}
+
+.trending-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.trending-profile-username {
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */
